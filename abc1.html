@@ -5,31 +5,23 @@
     
 <body style='margin : 0px; overflow: hidden;'>
 
-	
-        
-            <script>
-  AFRAME.registerComponent('alpha-test', {
-    dependencies: ['material'],
-    init: function () {
-      this.el.getObject3D('mesh').material.alphaTest = 0.2;
-    }
-  });
+<script>
+      AFRAME.registerComponent('alpha-test', {
+          dependencies: ['material'],
+          init: function () {
+          this.el.getObject3D('mesh').material.alphaTest = 0.2;
+          }
+      });
 </script>
 
 <a-scene embedded arjs='trackingMethod: best;'>
 
 		<a-anchor >
-            
-             <a-image position = "0.5 0 0" rotation='-90 0 0' width="4" height="4" opacity = "0.2" src="https://raw.githubusercontent.com/coob113/calligraphy/master/abc2.png"  transparent="true" alpha-test="0.2" shader = "standard"></a-image>
+            <a-image position = "0.5 0 0" rotation='-90 0 0' width="4" height="4" opacity = "0.2" src="https://raw.githubusercontent.com/coob113/calligraphy/master/abc2.png"  transparent="true" alpha-test="0.2" shader = "standard"></a-image>
         
             <a-box position='0 0 0' scale="0.5 0.01 0.5" material='opacity: 0.2;' rotation='0 0 0'></a-box>
-            
-            <!-- <a-entity text="opacity: 0.5; color: black; align: center; baseline: top; width: 2; font: https://raw.githubusercontent.com/coob113/calligraphy/master/font4.fnt; value: Learn Calligraphy with AR.js; wrapCount: 11" position="0 0 0.7" rotation="-90 0 0"></a-entity>-->
-            
-        
 		</a-anchor>
 
 		<a-camera-static/>
-
 	</a-scene>
 </body>
