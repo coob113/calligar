@@ -3,7 +3,13 @@
 <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
 <link rel="stylesheet" type="text/css" href="style.css">
     
+<style type="text/css">
+  #arjsDebugUIContainer { display:none; }
+</style>
+
 <body style='margin : 0px; overflow: hidden;'>
+
+<div style='position: fixed; top: 10px; width:100%; text-align:left; padding: 10px;  z-index: 1; font-family: Arial, Helvetica, sans-serif;'><a href="https://learncalligraphy.today" target="_blank"> Back</a></div>
 
 <script>
       AFRAME.registerComponent('alpha-test', {
@@ -17,7 +23,8 @@
 <a-scene embedded arjs='trackingMethod: best;'>
 
 		<a-anchor >
-            <a-image position = "0.5 0 0" rotation='-90 0 0' width="4" height="4" opacity = "0.2" src="https://raw.githubusercontent.com/coob113/calligAR/master/abc1.png"  transparent="true" alpha-test="0.2" shader = "standard"></a-image>
+           
+            <a-image position = "2.5 0 0" rotation='-90 0 0' width="4" height="4" opacity = "0.2" src="https://learncalligraphy.today/art/01.png"  transparent="true" alpha-test="0.2" shader = "standard"></a-image>
         
             <a-box position='0 0 0' scale="0.5 0.01 0.5" material='opacity: 0.2;' rotation='0 0 0'></a-box>
 		</a-anchor>
@@ -25,3 +32,7 @@
 		<a-camera-static/>
 	</a-scene>
 </body>
+
+
+
+
